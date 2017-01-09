@@ -1,0 +1,63 @@
+{
+  "name": "librsvg-prebuilt",
+  "version": "0.7.4",
+  "description": "Prebuilt librsvg binding. Parse SVG files and render them as PNG, PDF, SVG, or raw memory buffer images.",
+  "keywords": [
+    "svg",
+    "render",
+    "renders",
+    "rendering",
+    "graphic",
+    "graphics",
+    "image",
+    "images",
+    "librsvg",
+    "cairo",
+    "prebuilt",
+    "windows",
+    "cross-platform"
+  ],
+  "author": {
+    "name": "Wolfgang Felbermeier",
+    "email": "wf@felbermeier.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f3lang/node-rsvg-prebuilt.git"
+  },
+  "homepage": "https://github.com/f3lang/node-rsvg-prebuilt",
+  "bugs": {
+    "url": "https://github.com/f3lang/node-rsvg-prebuilt/issues",
+    "email": "wf@felbermeier.com"
+  },
+  "main": "rsvg",
+  "scripts": {
+    "test": "gulp test",
+    "install": "node-pre-gyp install",
+    "postinstall": "node-pre-gyp install"
+  },
+  "binary": {
+    "module_name": "librsvg",
+    "module_path": "./build",
+    "host": "https://f3lang.s3.eu-central-1.amazonaws.com/librsvg",
+    "package_name": "{module_name}-prebuilt-v{major}.{minor}.{patch}-{node_abi}-{platform}-{arch}.tar.gz"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "bindings": "~1.2.0",
+    "nan": "^2.4.0",
+    "node-pre-gyp": "^0.6.32"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0"
+  },
+  "license": "MIT"
+}
